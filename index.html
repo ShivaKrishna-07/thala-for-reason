@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thala For a Reason</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </head>
   <body>
     <div class="box">
@@ -20,14 +12,28 @@
         <h1>Everything happens for a Reason</h1>
         <div class="input-box">
           <label class="label">Type your Reason</label>
-          <input type="text" placeholder="Enter here  " />
+          <input id="userInput" type="text" placeholder="Enter here" />
         </div>
-        <button class="btn">Check your Reason</button>
+        <button onclick="checkConnection()" class="btn">Check your Reason</button>
       </form>
+
+
+      <p id="output"></p>
+      <video style="display: none;" controls id="localVideoSeven" width="380" height="250" controls>
+        <source src="thala.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video style="display: none;" controls id="localVideoOther" width="380" height="250" controls>
+        <source src="moye.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
     </div>
     
     <div class="img">
-      <img src="MS Dhoni.jpeg" alt="">
+      <img src="MSD.jpeg" alt="dhoni">
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
