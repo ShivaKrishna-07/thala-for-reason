@@ -8,22 +8,19 @@
   </head>
   <body>
     <div class="box">
-      <form action="">
         <h1>Everything happens for a Reason</h1>
         <div class="input-box">
           <label class="label">Type your Reason</label>
-          <input id="userInput" type="text" placeholder="Enter here" />
+          <input id="userInput" type="text" onkeydown="handleKeyPress(event)" placeholder="Enter here" />
         </div>
-        <button onclick="checkConnection()" class="btn">Check your Reason</button>
-      </form>
-
+        <button  onclick="checkConnection()" class="btn">Check your Reason</button>
 
       <p id="output"></p>
-      <video style="display: none;" controls id="localVideoSeven" width="380" height="250" controls>
+      <video style="display: none;" controls id="localVideoSeven" width="380" height="250" controls loop >
         <source src="thala.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <video style="display: none;" controls id="localVideoOther" width="380" height="250" controls>
+      <video style="display: none;" controls id="localVideoOther" width="380" height="250" controls loop >
         <source src="moye.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -31,7 +28,7 @@
     </div>
     
     <div class="img">
-      <img src="MSD.jpeg" alt="dhoni">
+      <img  src="MSD.jpeg" alt="dhoni">
     </div>
 
     <script src="script.js"></script>

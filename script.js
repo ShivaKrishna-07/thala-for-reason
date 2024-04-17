@@ -1,3 +1,12 @@
+
+
+function handleKeyPress(event) {
+    if (event.keyCode === 13) {
+        checkConnection();
+    }
+  }
+
+
 function checkConnection() {
     // Get user input
     const userInput = document.getElementById('userInput').value;
@@ -47,14 +56,17 @@ function checkConnection() {
 }
 
 function playLocalVideo(videoId) {
-    // Hide all video elements
+    
+    document.getElementById('localVideoSeven').pause();
+    document.getElementById('localVideoOther').pause();
+    document.getElementById('localVideoSeven').currentTime = 0;
+    document.getElementById('localVideoOther').currentTime = 0;
+    
     document.getElementById('localVideoSeven').style.display = 'none';
     document.getElementById('localVideoOther').style.display = 'none';
 
-    // Show the specified video element
     document.getElementById(videoId).style.display = 'block';
 
-    // Play the video
     document.getElementById(videoId).play();
 }
 
@@ -111,3 +123,4 @@ function wordplayConnection(input) {
 function displayOutput(message) {
     document.getElementById('output').innerText = message;
 }
+
